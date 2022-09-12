@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32804.467
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MS.Infra", "MS.Infra", "{90A6D2F9-510D-49EF-A3D5-8E0F14D353F0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docker", "docker", "{4D4E1F88-EFDD-4682-94C8-B655557CCD38}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yaml = docker-compose.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "kubernets", "kubernets", "{C42B22D6-7C81-407F-944A-BA030E601C5C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AD615988-943F-43EB-A192-AB2126E45FD8}"
+	ProjectSection(SolutionItems) = preProject
+		Readme.md = Readme.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{65A94A0E-E6B4-4212-B1F0-6BEE4A8F45EE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{19CBEA89-AD82-4F75-8EEC-6B68B50542C6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{FC659DC5-74E6-4332-AC72-8388E4BF5E0A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{EED69B55-F361-41C3-B2E8-9381EE3CAA64}"
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4D4E1F88-EFDD-4682-94C8-B655557CCD38} = {90A6D2F9-510D-49EF-A3D5-8E0F14D353F0}
+		{C42B22D6-7C81-407F-944A-BA030E601C5C} = {90A6D2F9-510D-49EF-A3D5-8E0F14D353F0}
+		{19CBEA89-AD82-4F75-8EEC-6B68B50542C6} = {65A94A0E-E6B4-4212-B1F0-6BEE4A8F45EE}
+		{FC659DC5-74E6-4332-AC72-8388E4BF5E0A} = {65A94A0E-E6B4-4212-B1F0-6BEE4A8F45EE}
+		{EED69B55-F361-41C3-B2E8-9381EE3CAA64} = {65A94A0E-E6B4-4212-B1F0-6BEE4A8F45EE}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0A09B754-01CC-4766-9B99-7A49DC88AEA9}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,51 @@
+version : "3"
+
+services:
+  ms-rabbitmq:
+    image: rabbitmq:3-management
+    container_name: ms-rabbitmq
+    enviroment:
+      RABBITMQ_DEFAULT_USER: "msuser"
+      RABBITMQ_DEFAULT_PASS: "msuser"
+    ports:
+      - "5672:5672"
+      - "15672:15672"  
+
+  ms-sql-server:
+    image: ms/ms-sql-server:latest
+    container_name: ms-sql-server
+    build:
+      context: ../sql
+      dockerfile: ./Dockerfile
+    enviroment:
+      SA_PASSWORD: "MsService@123"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+      
+  ms-web-front:
+    image: ms/front:latest
+    container_name: ms-web-front
+    build:
+      context: ../src
+      dockerfile: ./we
+    ports:
+      - "5001:5001"
+    enviroment:
+      - ASPNETCORE_ENVIROMENT=Production
+      - ASPNETCORE_URLS=http://*:5001
+    depends_on:
+      - ms-rabbitmq
+      - ms-sql-server
+
+  ms-nginx:
+    image: ms/ms-nginx:latest
+    container_name: ms-nginx
+    build:
+      context: ./
+      dockerfile: ./nginx/Dockerfile
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - ms-web-front    
